@@ -51,7 +51,7 @@ public class CarrinhoComprasFactory {
 				.map(CarrinhoCompras::getValorTotal)
 				.reduce(BigDecimal.ZERO, BigDecimal::add);
 
-		return somaTotal.divide(BigDecimal.valueOf(carrinhos.size()), 2, RoundingMode.HALF_UP);
+		return somaTotal.divide(BigDecimal.valueOf(carrinhos.size()), RoundingMode.HALF_UP);
     }
 
     /**
